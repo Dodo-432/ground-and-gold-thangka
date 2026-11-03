@@ -16,6 +16,24 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">
+<style>
+.contact-wrap{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:40px;align-items:start;padding:10px 0 70px}
+.contact-aside .card-s{margin-bottom:22px}
+.contact-form{background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--gold);padding:28px;border-radius:0}
+.contact-form h2{margin:0 0 18px;color:var(--gold2)}
+.contact-form label{display:block;font-weight:600;margin:0 0 6px;color:var(--ink)}
+.contact-form input,.contact-form textarea{display:block;width:100%;box-sizing:border-box;margin:0 0 18px;padding:12px 14px;font:inherit;color:var(--ink);background:#15130f;border:1px solid var(--line);border-radius:0}
+.contact-form textarea{min-height:170px;resize:vertical}
+.contact-form input:focus,.contact-form textarea:focus{outline:2px solid var(--gold);outline-offset:1px;border-color:var(--gold)}
+.contact-form button{display:inline-block;padding:12px 30px;font:inherit;font-weight:600;letter-spacing:.04em;color:#15130f;background:var(--gold);border:0;border-radius:0;cursor:pointer}
+.contact-form button:hover{filter:brightness(1.08)}
+.contact-form .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.contact-form .small{font-size:.9rem;opacity:.8;margin:14px 0 0}
+.sent-box{display:none}
+.is-sent .sent-box{display:block}
+.is-sent form{display:none}
+@media (max-width:860px){.contact-wrap{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -26,8 +44,31 @@
 </div></header>
 <main id="main">
 <section class="page-head" style="grid-template-columns:1fr"><div><h1>Get in touch</h1><p class="lede">Questions about technique, ideas for new notes and corrections are all welcome.</p></div></section>
-<div class="sections"><section class="card-s"><h2>Good reasons to write</h2><p>You noticed a detail in a painting and want to know how it was done. You think a note could explain something more clearly. You learned the craft yourself and see something we described inaccurately. Please name the note you are writing about.</p></section><section class="card-s"><h2>Before you write</h2><p>We cannot value or authenticate paintings, recommend sellers, or take commissions, and there is no phone number or office to visit. Replies may take a few days.</p></section></div>
-<div class="note"><p>Our contact inbox is being set up. Please check back soon.</p></div>
+<div class="contact-wrap">
+<section class="contact-form" id="contact-form" aria-labelledby="form-title">
+<h2 id="form-title">Send a message</h2>
+<div class="sent-box" id="sent" role="status"><p><strong>Thank you, your message has been sent.</strong></p><p>We read every note and will reply by email if your message needs an answer.</p></div>
+<form action="https://formsubmit.co/Divine99@customsong.in" method="POST">
+<input type="hidden" name="_subject" value="New message from Ground & Gold contact form">
+<input type="hidden" name="_next" id="next-url" value="https://dodo-432.github.io/ground-and-gold-thangka/contact.html?sent=1">
+<input type="hidden" name="_template" value="table">
+<div class="hp" aria-hidden="true"><label for="hp-field">Leave this empty</label><input type="text" name="_honey" id="hp-field" tabindex="-1" autocomplete="off"></div>
+<label for="c-name">Name</label>
+<input type="text" id="c-name" name="name" autocomplete="name" required maxlength="120">
+<label for="c-email">Email</label>
+<input type="email" id="c-email" name="email" autocomplete="email" required maxlength="200">
+<label for="c-message">Message</label>
+<textarea id="c-message" name="message" required maxlength="5000"></textarea>
+<button type="submit">Send</button>
+<p class="small">We only use your email to reply to you.</p>
+</form>
+</section>
+<aside class="contact-aside"><section class="card-s"><h2>Good reasons to write</h2><p>You noticed a detail in a painting and want to know how it was done. You think a note could explain something more clearly. You learned the craft yourself and see something we described inaccurately. Please name the note you are writing about.</p></section><section class="card-s"><h2>Before you write</h2><p>We cannot value or authenticate paintings, recommend sellers, or take commissions. Replies may take a few days.</p></section></aside>
+</div>
+<script>
+(function(){var n=document.getElementById('next-url');if(n&&/^https?:/.test(location.protocol)){n.value=location.origin+location.pathname+'?sent=1';}
+if(/[?&]sent=1/.test(location.search)){document.getElementById('contact-form').classList.add('is-sent');}})();
+</script>
 </main>
 <footer class="site-footer"><p><strong class="brand-name">Ground &amp; Gold</strong> &middot; Notes on how thangkas are built, and how to read their parts</p>
 <p>Images: historical paintings from The Metropolitan Museum of Art Open Access collection, public domain (CC0).</p>
