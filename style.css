@@ -1,0 +1,51 @@
+:root{--bg:#15130f;--panel:#1e1b16;--ink:#ece4d3;--muted:#b7ab94;--gold:#c9a54c;--gold2:#e2c675;--red:#c4553a;--line:#3a3328;--max:1180px}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.75 Georgia,"Times New Roman",serif}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--gold2)}a:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.skip{position:absolute;left:-999px}.skip:focus{left:12px;top:12px;background:#000;color:#fff;padding:8px 12px;z-index:10}
+.site-header{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(21,19,15,.96);z-index:5}
+.bar{max-width:var(--max);margin:0 auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.brand-mark{width:34px;height:34px;transform:rotate(45deg);border:2px solid var(--gold);background:linear-gradient(135deg,#000 0 50%,var(--gold) 50%)}
+.brand-name{font-family:"Didot","Bodoni 72","Bodoni MT","Times New Roman",serif;font-size:1.45rem;letter-spacing:.18em;text-transform:uppercase}
+.tagline{display:none}
+nav ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:2px 22px}
+nav a{display:block;padding:8px 0;text-decoration:none;color:var(--muted);font-family:"Gill Sans","Trebuchet MS",system-ui,sans-serif;font-size:.85rem;letter-spacing:.16em;text-transform:uppercase}
+nav a:hover,nav a[aria-current=page]{color:var(--gold2);box-shadow:inset 0 -2px 0 var(--gold)}
+main{max-width:var(--max);margin:0 auto;padding:0 22px}
+.hero{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center;padding:70px 0 50px;border-bottom:1px solid var(--line)}
+.hero figure{order:-1}
+.hero h1,.page-head h1{font-family:"Didot","Bodoni 72","Bodoni MT","Times New Roman",serif;font-weight:400;font-size:clamp(2.1rem,4.6vw,3.5rem);line-height:1.1;margin:0 0 20px;color:var(--gold2)}
+.lede{font-size:1.15rem;color:var(--muted)}
+.hero figure img,.page-head figure img{outline:1px solid var(--gold);outline-offset:10px;max-height:560px;width:auto;margin:10px auto}
+figure{margin:0}figcaption{font-family:"Gill Sans","Trebuchet MS",system-ui,sans-serif;font-size:.76rem;color:var(--muted);margin-top:16px;line-height:1.45;text-align:center}
+.sections{padding:30px 0 70px;columns:2;column-gap:56px}
+.card-s{break-inside:avoid;padding:0 0 26px;margin-bottom:26px;border-bottom:1px solid var(--line)}
+.card-s h2{font-family:"Gill Sans","Trebuchet MS",system-ui,sans-serif;font-size:.95rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin:0 0 10px}
+.card-s p{margin:0 0 12px}
+.page-head{display:grid;grid-template-columns:280px 1fr;gap:50px;align-items:center;padding:60px 0 40px;border-bottom:1px solid var(--line);margin-bottom:34px}
+.page-head figure{order:-1}
+.prose{max-width:700px;margin:0 auto;padding:10px 0 80px}
+.prose h2{font-family:"Didot","Bodoni 72","Bodoni MT","Times New Roman",serif;font-weight:400;color:var(--gold2);font-size:1.75rem;line-height:1.25;margin:2.2em 0 .5em}
+.prose h3{font-family:"Gill Sans","Trebuchet MS",system-ui,sans-serif;font-size:1.05rem;letter-spacing:.06em;color:var(--gold);margin:1.6em 0 .4em}
+.prose blockquote{margin:1.5em 0;padding:6px 22px;border-left:2px solid var(--gold);color:var(--muted);font-style:italic}
+.prose a{color:var(--gold2);font-weight:700;text-decoration-thickness:1.5px;text-underline-offset:4px}
+.article-head{max-width:860px;margin:0 auto;padding:60px 0 10px;text-align:center}
+.article-head h1{font-family:"Didot","Bodoni 72","Bodoni MT","Times New Roman",serif;font-weight:400;font-size:clamp(2rem,4.4vw,3rem);line-height:1.15;color:var(--gold2);margin:0 0 14px}
+.meta{font-family:"Gill Sans","Trebuchet MS",system-ui,sans-serif;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.article-fig{max-width:480px;margin:26px auto 40px}.article-fig img{outline:1px solid var(--gold);outline-offset:8px;max-height:580px;width:auto;margin:8px auto}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:30px;padding:10px 0 80px}
+.card{display:grid;grid-template-columns:170px 1fr;gap:22px;align-items:start;background:var(--panel);border:1px solid var(--line);padding:18px;text-decoration:none;color:var(--ink);transition:border-color .15s}
+.card:hover{border-color:var(--gold)}
+.card img{width:170px;height:220px;object-fit:cover;object-position:top}
+.card h2{font-family:"Didot","Bodoni 72","Bodoni MT","Times New Roman",serif;font-weight:400;font-size:1.35rem;line-height:1.25;color:var(--gold2);margin:0 0 8px}
+.card p{margin:0;color:var(--muted);font-size:.95rem}
+.card .more{display:inline-block;margin-top:12px;font-family:"Gill Sans","Trebuchet MS",sans-serif;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--red)}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;padding:10px 0 60px}
+.gallery img{height:300px;width:100%;object-fit:cover;object-position:top;border:1px solid var(--line)}
+.site-footer{border-top:1px solid var(--gold);padding:36px 22px;text-align:center;color:var(--muted);font-size:.88rem}
+.site-footer p{margin:4px 0}.site-footer .brand-name{color:var(--gold2);font-size:1rem}
+.note{border:1px solid var(--gold);padding:18px 22px;margin:24px 0;background:var(--panel)}
+@media (max-width:900px){.hero,.page-head{grid-template-columns:1fr;gap:28px;padding:40px 0 30px}.sections{columns:1}.cards{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}.page-head figure img{max-height:360px}}
+@media (max-width:560px){body{font-size:16.5px}.bar{justify-content:center}nav ul{justify-content:center;gap:0 14px}nav a{font-size:.74rem;letter-spacing:.12em}.brand-name{font-size:1.2rem}.card{grid-template-columns:1fr}.card img{width:100%;height:260px}.hero figure img{max-height:400px}.gallery img{height:220px}}

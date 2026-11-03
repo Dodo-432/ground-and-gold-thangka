@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dodo-432.github.io/ground-and-gold-thangka/sitemap.xml
